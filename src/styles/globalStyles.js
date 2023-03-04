@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
 }
 body {
 	margin: 0;
+	height: 100vh;
 	background-color: ${({ darkMode }) => (darkMode ? '#1D1F29' : '#FFF')};;
 	user-select: none;
 	font-family: 'Inter', sans-serif;

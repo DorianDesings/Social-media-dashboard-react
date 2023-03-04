@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const ToggleContainer = styled.div`
 	position: relative;
-	top: 45px;
 	display: flex;
 	align-items: center;
 `;
@@ -21,7 +20,7 @@ const StyledLabel = styled.label`
 	border-radius: 1rem;
 	padding: 0.25rem;
 	background: ${({ darkMode }) =>
-		darkMode ? '#AEB3CB' : 'linear-gradient(#40DB82,#388FE7)'};
+		darkMode ? 'linear-gradient(#40DB82,#388FE7)' : '#AEB3CB'};
 	cursor: pointer;
 
 	&::after,

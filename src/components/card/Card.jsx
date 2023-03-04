@@ -1,3 +1,5 @@
+import { StyledCard } from './styles';
+
 const Card = ({
 	icon,
 	alt,
@@ -9,7 +11,7 @@ const Card = ({
 	positive
 }) => {
 	return (
-		<div>
+		<StyledCard>
 			<div>
 				<img src={icon} alt={alt} />
 				<span>{username}</span>
@@ -26,7 +28,7 @@ const Card = ({
 				)}
 				<span>{amount} Today</span>
 			</div>
-		</div>
+		</StyledCard>
 	);
 };
 

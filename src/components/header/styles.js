@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-	padding: 1px 10.5rem;
 	height: 250px;
 	background-color: ${({ darkMode }) => (darkMode ? '#20222F' : '#F7F9FF')};
 	transition: background-color 0.3s linear;
 `;
 
 const HeaderContent = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: ${({ darkMode }) => (darkMode ? '#20222F' : '#F7F9FF')};
 	transition: background-color 0.3s linear;
 `;
