@@ -17,7 +17,7 @@ const MainContainer = ({ darkMode, setDarkMode, totalText, totalNumber }) => {
 			</Header>
 			<main>
 				<Card
-					icon={'/public/images/icon-facebook.svg'}
+					icon={'/images/icon-facebook.svg'}
 					alt='Icon Facebook'
 					username='@nathanf'
 					number={1987}
