@@ -10,7 +10,7 @@ const HeaderContent = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 1440px;
+	max-width: 1110px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: ${({ darkMode }) => (darkMode ? '#20222F' : '#F7F9FF')};

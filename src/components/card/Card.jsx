@@ -1,4 +1,10 @@
-import { StyledCard } from './styles';
+import {
+	CardCategory,
+	CardCounter,
+	CardHeader,
+	CardNumber,
+	StyledCard
+} from './styles';
 
 const Card = ({
 	icon,
@@ -8,26 +14,26 @@ const Card = ({
 	category,
 	amount,
 	border,
+	darkMode,
 	positive
 }) => {
 	return (
-		<StyledCard>
-			<div>
+		<StyledCard border={border} darkMode={darkMode}>
+			<CardHeader darkMode={darkMode}>
 				<img src={icon} alt={alt} />
 				<span>{username}</span>
-			</div>
-			<div>
-				<span>{number}</span>
-				<span>{category}</span>
-			</div>
-			<div>
+			</CardHeader>
+			<CardNumber darkMode={darkMode}>{number}</CardNumber>
+			<CardCategory darkMode={darkMode}>{category}</CardCategory>
+
+			<CardCounter positive={positive}>
 				{positive ? (
 					<img src='/images/icon-up.svg' alt='icon up' />
 				) : (
 					<img src='/images/icon-down.svg' alt='icon down' />
 				)}
 				<span>{amount} Today</span>
-			</div>
+			</CardCounter>
 		</StyledCard>
 	);
 };
