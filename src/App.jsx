@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import MainContainer from './components/main-container/MainContainer';
+import { mainCards } from './constants/main-cards';
 import { GlobalStyle } from './styles/globalStyles';
+
+const totalNumber = mainCards.reduce((acc, current) => current.number + acc, 0);
 
 const App = () => {
 	const [darkMode, setDarkMode] = useState(false);
@@ -11,7 +14,7 @@ const App = () => {
 				darkMode={darkMode}
 				setDarkMode={setDarkMode}
 				totalText='Total Followers'
-				totalNumber={23.004}
+				totalNumber={totalNumber}
 			/>
 		</>
 	);

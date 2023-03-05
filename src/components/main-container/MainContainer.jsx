@@ -1,5 +1,6 @@
 import { ICONS } from '../../constants/icons';
 import { mainCards } from '../../constants/main-cards';
+import { formatNumber } from '../../utils/formatNumberToMiles';
 import Card from '../card/Card';
 import Header from '../header/Header';
 import { HeaderContent, HeaderSubtitle, HeaderTitle } from '../header/styles';
@@ -17,7 +18,7 @@ const MainContainer = ({ darkMode, setDarkMode, totalText, totalNumber }) => {
 							Social Media Dashboard
 						</HeaderTitle>
 						<HeaderSubtitle darkMode={darkMode}>
-							{totalText} {totalNumber}
+							{totalText} {formatNumber(totalNumber)}
 						</HeaderSubtitle>
 					</div>
 					<Toggle darkMode={darkMode} setDarkMode={setDarkMode} />
@@ -49,7 +50,7 @@ const MainContainer = ({ darkMode, setDarkMode, totalText, totalNumber }) => {
 					<SmallCard
 						text='Likes'
 						icon={ICONS.instagram}
-						number={5462}
+						number={formatNumber(5462)}
 						amount='2257%'
 						darkMode={darkMode}
 						positive
@@ -57,7 +58,7 @@ const MainContainer = ({ darkMode, setDarkMode, totalText, totalNumber }) => {
 					<SmallCard
 						text='Profile Views'
 						icon={ICONS.instagram}
-						number='52k'
+						number={formatNumber(52000)}
 						amount='1375%'
 						darkMode={darkMode}
 						positive
