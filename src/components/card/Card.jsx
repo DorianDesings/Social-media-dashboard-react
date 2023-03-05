@@ -16,7 +16,7 @@ const Card = ({
 	return (
 		<StyledCard border={border} darkMode={darkMode}>
 			<CardHeader darkMode={darkMode}>
-				<CardIcon icon={icon} alt={alt} />
+				<CardIcon icon={icon} />
 				<span>{username}</span>
 			</CardHeader>
 			<CardNumber darkMode={darkMode}>{number}</CardNumber>

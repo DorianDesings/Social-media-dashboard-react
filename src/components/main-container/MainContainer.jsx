@@ -4,8 +4,9 @@ import { mainCards } from '../../constants/main-cards';
 import Card from '../card/Card';
 import Header from '../header/Header';
 import { HeaderContent, HeaderSubtitle, HeaderTitle } from '../header/styles';
+import SmallCard from '../small-card/SmallCard';
 import Toggle from '../toggle/Toggle';
-import { StyledMain } from './styles';
+import { StyledMain, StyledMainCards, StyledSecondaryCards } from './styles';
 
 const MainContainer = ({ darkMode, setDarkMode, totalText, totalNumber }) => {
 	return (
@@ -24,21 +25,81 @@ const MainContainer = ({ darkMode, setDarkMode, totalText, totalNumber }) => {
 				</HeaderContent>
 			</Header>
 			<StyledMain>
-				{mainCards.map(card => (
-					<Card key={v4()} {...card} darkMode={darkMode} />
-				))}
+				<StyledMainCards>
+					{mainCards.map(card => (
+						<Card key={v4()} {...card} darkMode={darkMode} />
+					))}
 
-				<Card
-					icon={ICONS.facebook.src}
-					alt={ICONS.facebook.alt}
-					username='@nathanf'
-					number={1987}
-					category='Followers'
-					amount={12}
-					border='#178FF5'
-					darkMode={darkMode}
-					positive
-				/>
+					<Card
+						icon={ICONS.facebook}
+						username='@nathanf'
+						number={1987}
+						category='Followers'
+						amount='12 Today'
+						border='#178FF5'
+						darkMode={darkMode}
+						positive
+					/>
+				</StyledMainCards>
+				<h2>Overview - Today</h2>
+				<StyledSecondaryCards>
+					<SmallCard
+						text='Page Views'
+						icon={ICONS.facebook}
+						number={117}
+						amount='3%'
+						darkMode={darkMode}
+					/>
+					<SmallCard
+						text='Page Views'
+						icon={ICONS.facebook}
+						number={117}
+						amount='3%'
+						darkMode={darkMode}
+					/>
+					<SmallCard
+						text='Page Views'
+						icon={ICONS.facebook}
+						number={117}
+						amount='3%'
+						darkMode={darkMode}
+					/>
+					<SmallCard
+						text='Page Views'
+						icon={ICONS.facebook}
+						number={117}
+						amount='3%'
+						darkMode={darkMode}
+					/>
+					<SmallCard
+						text='Page Views'
+						icon={ICONS.facebook}
+						number={117}
+						amount='3%'
+						darkMode={darkMode}
+					/>
+					<SmallCard
+						text='Page Views'
+						icon={ICONS.facebook}
+						number={117}
+						amount='3%'
+						darkMode={darkMode}
+					/>
+					<SmallCard
+						text='Page Views'
+						icon={ICONS.facebook}
+						number={117}
+						amount='3%'
+						darkMode={darkMode}
+					/>
+					<SmallCard
+						text='Page Views'
+						icon={ICONS.facebook}
+						number={117}
+						amount='3%'
+						darkMode={darkMode}
+					/>
+				</StyledSecondaryCards>
 			</StyledMain>
 		</>
 	);
