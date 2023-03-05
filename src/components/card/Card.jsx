@@ -4,7 +4,6 @@ import { CardCategory, CardHeader, CardNumber, StyledCard } from './styles';
 
 const Card = ({
 	icon,
-	alt,
 	username,
 	number,
 	category,

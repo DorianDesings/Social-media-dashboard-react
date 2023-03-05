@@ -1,6 +1,8 @@
+import { v4 } from 'uuid';
 import { ICONS } from './icons';
 export const mainCards = [
 	{
+		id: v4(),
 		icon: ICONS.facebook,
 		username: '@nathanf',
 		number: 1987,
@@ -10,6 +12,7 @@ export const mainCards = [
 		positive: true
 	},
 	{
+		id: v4(),
 		icon: ICONS.twitter,
 		username: '@nathanf',
 		number: 1044,
@@ -19,6 +22,7 @@ export const mainCards = [
 		positive: true
 	},
 	{
+		id: v4(),
 		icon: ICONS.instagram,
 		username: '@nathanf',
 		number: '11K',
@@ -28,6 +32,7 @@ export const mainCards = [
 		positive: true
 	},
 	{
+		id: v4(),
 		icon: ICONS.youtube,
 		username: '@nathanf',
 		number: '8239',

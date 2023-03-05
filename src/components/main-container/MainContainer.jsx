@@ -1,4 +1,3 @@
-import { v4 } from 'uuid';
 import { ICONS } from '../../constants/icons';
 import { mainCards } from '../../constants/main-cards';
 import Card from '../card/Card';
@@ -27,19 +26,8 @@ const MainContainer = ({ darkMode, setDarkMode, totalText, totalNumber }) => {
 			<StyledMain>
 				<StyledMainCards>
 					{mainCards.map(card => (
-						<Card key={v4()} {...card} darkMode={darkMode} />
+						<Card key={card.id} {...card} darkMode={darkMode} />
 					))}
-
-					<Card
-						icon={ICONS.facebook}
-						username='@nathanf'
-						number={1987}
-						category='Followers'
-						amount='12 Today'
-						border='#178FF5'
-						darkMode={darkMode}
-						positive
-					/>
 				</StyledMainCards>
 				<h2>Overview - Today</h2>
 				<StyledSecondaryCards>
