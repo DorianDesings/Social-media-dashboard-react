@@ -1,3 +1,6 @@
+import { v4 } from 'uuid';
+import { ICONS } from '../../constants/icons';
+import { mainCards } from '../../constants/main-cards';
 import Card from '../card/Card';
 import Header from '../header/Header';
 import { HeaderContent, HeaderSubtitle, HeaderTitle } from '../header/styles';
@@ -21,9 +24,13 @@ const MainContainer = ({ darkMode, setDarkMode, totalText, totalNumber }) => {
 				</HeaderContent>
 			</Header>
 			<StyledMain>
+				{mainCards.map(card => (
+					<Card key={v4()} {...card} darkMode={darkMode} />
+				))}
+
 				<Card
-					icon={'/images/icon-facebook.svg'}
-					alt='Icon Facebook'
+					icon={ICONS.facebook.src}
+					alt={ICONS.facebook.alt}
 					username='@nathanf'
 					number={1987}
 					category='Followers'
@@ -31,38 +38,6 @@ const MainContainer = ({ darkMode, setDarkMode, totalText, totalNumber }) => {
 					border='#178FF5'
 					darkMode={darkMode}
 					positive
-				/>
-				<Card
-					icon={'/images/icon-twitter.svg'}
-					alt='Icon Twitter'
-					username='@nathanf'
-					number={1044}
-					category='Followers'
-					amount={99}
-					border='#1DA1F2'
-					darkMode={darkMode}
-					positive
-				/>
-				<Card
-					icon={'/images/icon-instagram.svg'}
-					alt='Icon Instagram'
-					username='@nathanf'
-					number='11K'
-					category='Followers'
-					amount={1099}
-					border='#FDC366'
-					darkMode={darkMode}
-					positive
-				/>
-				<Card
-					icon={'/images/icon-youtube.svg'}
-					alt='Icon Youtube'
-					username='@nathanf'
-					number={8239}
-					category='Subscribers'
-					amount={144}
-					darkMode={darkMode}
-					border='#C4032B'
 				/>
 			</StyledMain>
 		</>

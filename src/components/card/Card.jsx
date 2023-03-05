@@ -1,10 +1,6 @@
-import {
-	CardCategory,
-	CardCounter,
-	CardHeader,
-	CardNumber,
-	StyledCard
-} from './styles';
+import CardCounter from '../card-counter/CardCounter';
+import CardIcon from '../card-icon/CardIcon';
+import { CardCategory, CardHeader, CardNumber, StyledCard } from './styles';
 
 const Card = ({
 	icon,
@@ -20,20 +16,13 @@ const Card = ({
 	return (
 		<StyledCard border={border} darkMode={darkMode}>
 			<CardHeader darkMode={darkMode}>
-				<img src={icon} alt={alt} />
+				<CardIcon icon={icon} alt={alt} />
 				<span>{username}</span>
 			</CardHeader>
 			<CardNumber darkMode={darkMode}>{number}</CardNumber>
 			<CardCategory darkMode={darkMode}>{category}</CardCategory>
 
-			<CardCounter positive={positive}>
-				{positive ? (
-					<img src='/images/icon-up.svg' alt='icon up' />
-				) : (
-					<img src='/images/icon-down.svg' alt='icon down' />
-				)}
-				<span>{amount} Today</span>
-			</CardCounter>
+			<CardCounter positive={positive} amount={amount} />
 		</StyledCard>
 	);
 };
