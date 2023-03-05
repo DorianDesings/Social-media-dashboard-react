@@ -49,54 +49,59 @@ const MainContainer = ({ darkMode, setDarkMode, totalText, totalNumber }) => {
 						number={117}
 						amount='3%'
 						darkMode={darkMode}
+						positive
 					/>
 					<SmallCard
-						text='Page Views'
+						text='Likes'
 						icon={ICONS.facebook}
-						number={117}
+						number={52}
 						amount='3%'
 						darkMode={darkMode}
 					/>
 					<SmallCard
-						text='Page Views'
-						icon={ICONS.facebook}
+						text='Likes'
+						icon={ICONS.instagram}
+						number={5462}
+						amount='2257%'
+						darkMode={darkMode}
+						positive
+					/>
+					<SmallCard
+						text='Profile Views'
+						icon={ICONS.instagram}
+						number='52k'
+						amount='1375%'
+						darkMode={darkMode}
+						positive
+					/>
+					<SmallCard
+						text='Retweets'
+						icon={ICONS.twitter}
 						number={117}
-						amount='3%'
+						amount='303%'
+						darkMode={darkMode}
+						positive
+					/>
+					<SmallCard
+						text='Likes'
+						icon={ICONS.twitter}
+						number={507}
+						amount='553%'
+						darkMode={darkMode}
+						positive
+					/>
+					<SmallCard
+						text='Likes'
+						icon={ICONS.youtube}
+						number={107}
+						amount='19%'
 						darkMode={darkMode}
 					/>
 					<SmallCard
-						text='Page Views'
-						icon={ICONS.facebook}
-						number={117}
-						amount='3%'
-						darkMode={darkMode}
-					/>
-					<SmallCard
-						text='Page Views'
-						icon={ICONS.facebook}
-						number={117}
-						amount='3%'
-						darkMode={darkMode}
-					/>
-					<SmallCard
-						text='Page Views'
-						icon={ICONS.facebook}
-						number={117}
-						amount='3%'
-						darkMode={darkMode}
-					/>
-					<SmallCard
-						text='Page Views'
-						icon={ICONS.facebook}
-						number={117}
-						amount='3%'
-						darkMode={darkMode}
-					/>
-					<SmallCard
-						text='Page Views'
-						icon={ICONS.facebook}
-						number={117}
-						amount='3%'
+						text='Total Views'
+						icon={ICONS.youtube}
+						number={1407}
+						amount='12%'
 						darkMode={darkMode}
 					/>
 				</StyledSecondaryCards>

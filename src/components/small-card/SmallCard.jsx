@@ -2,7 +2,7 @@ import CardCounter from '../card-counter/CardCounter';
 import CardIcon from '../card-icon/CardIcon';
 import { SmallCardHeader, StyledSmallCard } from './styles';
 
-const SmallCard = ({ text, icon, number, amount, darkMode }) => {
+const SmallCard = ({ text, icon, number, amount, positive, darkMode }) => {
 	return (
 		<StyledSmallCard darkMode={darkMode}>
 			<SmallCardHeader>
@@ -11,7 +11,7 @@ const SmallCard = ({ text, icon, number, amount, darkMode }) => {
 			</SmallCardHeader>
 			<SmallCardHeader>
 				<span>{number}</span>
-				<CardCounter amount={amount} positive />
+				<CardCounter amount={amount} positive={positive} />
 			</SmallCardHeader>
 		</StyledSmallCard>
 	);
